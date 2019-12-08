@@ -1,6 +1,11 @@
-docker-compose up -d
-docker-compose exec django-hello-service bash
-django-admin.py startproject webserver .
-mkdir -p api/hello
-django-admin.py startapp hello /app/api/hello
-python manage.py runserver 0.0.0.0:80
+#>docker-compose up
+CTRL-D
+#>docker-compose up -d
+#>docker-compose exec django-hello-service bash
+#>rm -r *
+#>django-admin.py startproject webserver .
+#>django-admin.py startapp hello /app/api/hello
+CTRL-D
+#git restore app/api/hello/views.py app/webserver/settings.py app/webserver/urls.py
+#>docker-compose exec django-hello-service bash
+#>python manage.py runserver 0.0.0.0:80
