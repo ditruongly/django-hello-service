@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    django-hello-service:
+        image: django-hello-service:1.0.0
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: django-hello-service
+        ports:
+            - "8000:80"
+        volumes:
+            - ./app:/app
+        stdin_open: true
+        tty: true
+
